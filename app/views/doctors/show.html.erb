@@ -10,6 +10,8 @@
 <%= content_tag :h3, "Patients:" %>
 <%= content_tag :ul, id: 'patients' do %>
   <% @doctor.patients.each do |patient| %>
-    <%= content_tag :li, patient.name %>
+    <%= content_tag :li, id: "patient-#{patient.id}" do %>
+      <%= patient.name %><%= button_to 'Remove Patient', "/patients/#{patient.id}", method: :delete %>
+    <% end %>
   <% end %>
 <% end %>
