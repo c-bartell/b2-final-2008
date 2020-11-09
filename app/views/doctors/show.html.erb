@@ -1,6 +1,15 @@
 <%= content_tag :h1, "Dr. #{@doctor.name}" %>
 
 <%= content_tag :div, id: 'bio' do %>
+  <%= content_tag :h3, "Bio:" %>
   <%= content_tag :p, "Specialty: #{@doctor.specialty}" %>
   <%= content_tag :p, "Alma Mater: #{@doctor.university}" %>
+  <%= content_tag :p, "Hospital: #{@doctor.hospital.name}" %>
+<% end %>
+
+<%= content_tag :h3, "Patients:" %>
+<%= content_tag :ul, id: 'patients' do %>
+  <% @doctor.patients.each do |patient| %>
+    <%= content_tag :li, patient.name %>
+  <% end %>
 <% end %>
