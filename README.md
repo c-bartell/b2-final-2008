@@ -80,7 +80,7 @@ And I see the names of all of the patients this doctor has
 ```
 User Story 2, Hospital Show Page
 
-[ ]
+[X]
 
 As a visitor
 When I visit a hospital's show page

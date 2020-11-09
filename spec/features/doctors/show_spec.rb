@@ -33,6 +33,36 @@ describe 'Doctors Show Page' do
           expect(page).to have_content(@patient2.name)
         end
       end
+
+      it "Next to each patient's name, I see a button to remove that patient from that doctor's caseload" do
+        within '#patients' do
+          within "#patient-#{@patient1.id}" do
+            expect(page).to have_button('Remove Patient')
+          end
+
+          within "#patient-#{@patient2.id}" do
+            expect(page).to have_button('Remove Patient')
+          end
+        end
+      end
+
+      it "When I click 'Remove Patient', next to a patient, I'm brought back to the Doctor's show page and I no longer see that patient's name listed" do
+        within "#patient-#{@patient1.id}" do
+          click_button('Remove Patient')
+        end
+
+        expect(current_path).to eq("/doctors/#{@doctor.id}")
+
+        within '#patients' do
+          expect(page).to_not have_content(@patient1.name)
+          expect(page).to have_content(@patient2.name)
+        end
+      end
     end
   end
 end
+
+
+# When I click that button for one patient
+# I'm brought back to the Doctor's show page
+# And I no longer see that patient's name listed
