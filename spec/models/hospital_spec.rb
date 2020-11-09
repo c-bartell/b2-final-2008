@@ -5,4 +5,18 @@ describe Hospital do
     it { should have_many :doctors }
     it { should have_many(:patients).through(:doctors) }
   end
+
+  describe 'Instance Methods' do
+    before :each do
+      @hospital = Hospital.create!(name: 'Grey Sloan Memorial Hospital')
+      @doctor1 = @hospital.doctors.create!(name: 'Meredith Grey', specialty: 'General Surgery', university: 'Harvard University')
+      @doctor2 = @hospital.doctors.create!(name: 'Alex Karev', specialty: 'Pediatric Surgery', university: 'Johns Hopkins University')
+      @doctor3 = @hospital.doctors.create!(name: 'Miranda Bailey', specialty: 'General Surgery', university: 'Harvard University')
+      @doctor4 = @hospital.doctors.create!(name: 'Derek McDreamy Shepherd', specialty: 'Attending Surgeon', university: 'University of Pennsylvania')
+    end
+
+    it '#number_doctors' do
+      expect(@hospital.number_doctors).to eq(4)
+    end
+  end
 end
