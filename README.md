@@ -64,6 +64,8 @@ Set up your database tables, models, and relationships. Then, complete the user 
 ```
 User Story 1, Doctors Show Page
 ​
+[ ]
+
 As a visitor
 When I visit a doctor's show page
 I see all of that doctor's information including:
@@ -78,6 +80,8 @@ And I see the names of all of the patients this doctor has
 ```
 User Story 2, Hospital Show Page
 
+[ ]
+
 As a visitor
 When I visit a hospital's show page
 I see the hospital's name
@@ -89,6 +93,8 @@ And I see a unique list of universities that this hospital's doctors attended
 ```
 User Story 3, Remove a Patient from a Doctor
 ​
+[ ]
+
 As a visitor
 When I visit a Doctor's show page
 Next to each patient's name, I see a button to remove that patient from that doctor's caseload
@@ -101,6 +107,8 @@ And I no longer see that patient's name listed
 
 ```
 Extension, Patient Index Page
+
+[ ]
 
 As a visitor
 When I visit the patient index page
