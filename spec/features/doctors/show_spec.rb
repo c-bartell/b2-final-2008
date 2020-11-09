@@ -1,10 +1,6 @@
 require 'rails_helper'
 
 describe 'Doctors Show Page' do
-  before :each do
-
-  end
-
   describe 'As a visitor' do
     before :each do
       @hospital = Hospital.create!(name: 'Grey Sloan Memorial Hospital')

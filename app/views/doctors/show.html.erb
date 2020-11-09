@@ -1,0 +1,6 @@
+<%= content_tag :h1, "Dr. #{@doctor.name}" %>
+
+<%= content_tag :div, id: 'bio' do %>
+  <%= content_tag :p, "Specialty: #{@doctor.specialty}" %>
+  <%= content_tag :p, "Alma Mater: #{@doctor.university}" %>
+<% end %>
