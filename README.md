@@ -64,7 +64,7 @@ Set up your database tables, models, and relationships. Then, complete the user 
 ```
 User Story 1, Doctors Show Page
 ​
-[ ]
+[X]
 
 As a visitor
 When I visit a doctor's show page
