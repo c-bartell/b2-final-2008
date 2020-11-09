@@ -22,15 +22,20 @@ describe 'Doctors Show Page' do
           expect(page).to have_content("Alma Mater: #{@doctor.university}")
         end
       end
+
+      it "I see the name of the hospital where the doctor works and the names of all their patients" do
+        within '#bio' do
+          expect(page).to have_content("Hospital: #{@hospital.name}")
+        end
+
+        within '#patients' do
+          expect(page).to have_content(@patient1.name)
+          expect(page).to have_content(@patient2.name)
+        end
+      end
     end
   end
 end
 
-# As a visitor
-# When I visit a doctor's show page
-# I see all of that doctor's information including:
-#  - name
-#  - specialty
-#  - university where they got their doctorate
 # And I see the name of the hospital where this doctor works
 # And I see the names of all of the patients this doctor has
