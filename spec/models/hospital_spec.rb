@@ -18,5 +18,11 @@ describe Hospital do
     it '#number_doctors' do
       expect(@hospital.number_doctors).to eq(4)
     end
+
+    it '#universities' do
+      expected = [@doctor1.university, @doctor2.university, @doctor4.university]
+
+      expect(@hospital.universities).to eq(expected)
+    end
   end
 end
