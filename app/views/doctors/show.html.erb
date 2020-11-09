@@ -11,7 +11,7 @@
 <%= content_tag :ul, id: 'patients' do %>
   <% @doctor.patients.each do |patient| %>
     <%= content_tag :li, id: "patient-#{patient.id}" do %>
-      <%= patient.name %><%= button_to 'Remove Patient', "/patients/#{patient.id}", method: :delete %>
+      <%= patient.name %><%= button_to 'Remove Patient', "/doctor_patients/#{patient.id}", method: :delete, params: {doctor_id: @doctor.id} %>
     <% end %>
   <% end %>
 <% end %>
