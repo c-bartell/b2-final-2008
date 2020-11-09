@@ -18,7 +18,7 @@ describe 'Hospital Show Page' do
         expect(page).to have_content(@hospital.name)
 
         within '#doctor-info' do
-          expect(page).to have_content("#{hospital.number_doctors} on staff.")
+          expect(page).to have_content("#{@hospital.number_doctors} doctors on staff.")
         end
 
         within '#universities' do
