@@ -1,0 +1,11 @@
+<%= content_tag :h1, @hospital.name %>
+
+<%= content_tag :div, id: 'doctor-info' do %>
+  <%= content_tag :p, "#{@hospital.number_doctors} doctors on staff." %>
+<% end %>
+
+<%= content_tag :ul, id: 'universities' do %>
+  <% @hospital.universities.each do |university| %>
+    <%= content_tag :li, university %>
+  <% end %>
+<% end %>
